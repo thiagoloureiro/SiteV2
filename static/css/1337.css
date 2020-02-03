@@ -1,0 +1,38 @@
+table tbody tr.malicious {
+    color: #ff0000;
+  }
+  table tbody tr:nth-child(2n+1) {
+    background-color: #333;
+  }
+  input {
+    background-color: #000;
+    border-color: #33FF00;
+  }
+  .summary {
+    border-color: #33FF00;
+  }
+  .ascii-logo {
+    color: #33FF00;
+  }
+  body {
+    background-color: #000;
+    color: #33FF00;
+  }
+  a {
+    border-color: #33FF00;
+  }
+  a:hover {
+    border-color: #33FF00;
+  }
+  button {
+    border-color: #33FF00;
+  }
+  .tabs {
+    border-color: #33FF00;
+  }
+  .tabs button {
+    border-color: #33FF00;
+  }
+  .tabs button.active {
+    border-bottom: 1px solid #000;
+  }

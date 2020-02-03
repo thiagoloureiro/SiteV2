@@ -1,0 +1,57 @@
+body {
+  
+  color: #00FFED;
+}
+table tbody tr.malicious {
+  color: #ff0000;
+
+  text-shadow: 0 0 5px #ff0000,
+              0 0 10px #ff0000;
+}
+table tbody tr:nth-child(2n+1) {
+  background-color: #333;
+}
+input {
+  background-color: #000F21;
+  border-color: #00FFED;
+ 
+}
+.summary {
+  border-color: #00FFED;
+}
+.ascii-logo {
+  color: #00FFED;
+
+  text-shadow: 0 0 5px #00FFED,
+              0 0 10px #00FFED,
+              0 0 20px #00FFED,
+              0 0 30px #00FFED,
+              0 0 40px #00FFED;
+}
+body {
+  background-color: #000F21;
+  color: #00FFED;
+}
+a {
+  border-color: #00FFED;
+}
+a:hover {
+  border-color: #00FFED;
+}
+button {
+  border-color: #00FFED;
+  box-shadow: 0 0 15px #00FFED;
+  text-shadow: 0 0 5px #00FFED,
+              0 0 10px #00FFED,
+              0 0 20px #00FFED;
+}
+.tabs {
+  border-color: #00FFED;
+}
+.tabs button {
+  border-color: #00FFED;
+  box-shadow: none;
+}
+.tabs button.active {
+  border-bottom: 1px solid #000;
+}

@@ -1,0 +1,101 @@
+body {
+  font-size: 1rem;
+  font-family: monospace;
+  max-width: 900px;
+  margin: auto;
+  background: #111;
+  color: #EEE;
+}
+a {
+  text-decoration: none;
+  border-bottom: 1px dashed #EEE;
+  color: inherit;
+}
+a:hover {
+  border-bottom: 1px solid #EEE;
+}
+button {
+  background: none;
+  font-family: monospace;
+  border: 1px dashed #EEE;
+  color: inherit;
+  cursor: pointer;
+}
+button:hover {
+  border-style: solid;
+}
+button:focus {
+  outline: 0;
+}
+.ascii-logo {
+  color: #EEE;
+  display: block;
+  line-height: 8px;
+  font-size: 7px;
+  font-weight: bold;
+  white-space: pre;
+  margin: 50px auto;
+  width: 710px;
+  text-decoration: none;
+  border-bottom: 0;
+}
+.ascii-logo:hover {
+  border-bottom: 0;
+}
+.outdated-browser {
+  text-align: center;
+  margin-top: -30px;
+  margin-bottom: 30px;
+}
+
+.summary {
+  border: 1px dashed #EEE;
+  padding: 25px;
+}
+.summary > div {
+  margin-bottom: 20px;
+}
+.summary > div:last-of-type {
+  margin-bottom: 0;
+}
+
+input {
+  height: 37px;
+  box-sizing: border-box;
+  background: #111;
+  color: inherit;
+  border: 1px solid #EEE;
+}
+
+table {
+  margin: 20px 0 50px;
+}
+table th,
+table td {
+  padding: 5px 25px;
+}
+table tbody tr:nth-child(2n+1) {
+  background: #111;
+}
+
+table tbody tr.malicious {
+  color: #ca2e2e;
+}
+
+.tabs {
+  border-bottom: 1px dashed #EEE;
+}
+.tabs button {
+  display: inline-block;
+  padding: 10px 25px;
+  margin-bottom: -1px;
+  border: 1px dashed #EEE;
+  border-bottom: 0px;
+  color: inherit;
+}
+.tabs button.active {
+  border-bottom: 1px solid #111;
+}
+.tabs-content > div {
+  padding: 25px 0;
+}

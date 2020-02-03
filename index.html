@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.virustotal.com/old-browsers/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Feb 2020 03:24:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>
+    
+      VirusTotal - Free Online Virus, Malware and URL Scanner
+    
+  </title>
+
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Pragma" content="no-store">
+  <meta http-equiv="Expires" content="-1">
+  <meta name="keywords" content="virustotal, antivirus, infected, free, scan, online, malware,malicious, scanner">
+
+  <meta name="description" content="VirusTotal is a free virus, malware and URL online scanning service. File checking is done with more than 40 antivirus solutions. Files and URLs can be sent via web interface upload, email API or making use of VirusTotal's browser extensions and desktop applications.">
+
+  <link rel="shortcut icon" href="static/img/favicon.png">
+  <link rel="icon" href="static/img/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="static/css/style.css">
+
+  
+<style>
+  .wrapper {
+    text-align: center;
+    max-width: 80%;
+    margin: auto;
+  }
+  #fileSelector {
+    display: none;
+  }
+  #selectedFileName {
+    margin-bottom: 20px;
+    height: 31px;
+    line-height: 31px;
+  }
+  button {
+    padding: 10px 50px;
+  }
+  input {
+    min-width: 400px;
+    padding: 5px 10px;
+  }
+  input:focus {
+    outline: 0;
+  }
+</style>
+
+
+  <script type="text/javascript" src="static/js/main.js"></script>
+
+  <script type="text/javascript">
+    var styles = {
+      'retro': '/old-browsers/static/css/retro.css',
+      '1337': '/old-browsers/static/css/1337.css',
+      'scifi': '/site/old-browsers/static/css/scifi.css',
+      'bright': '/old-browsers/static/css/bright.css',
+      'cute': '/old-browsers/static/css/cute.css',
+      'default': '/old-browsers/static/css/style.css',
+    };
+    (function() {
+      var style = getUrlParam('style');
+
+    
+      try {
+        if (!style) {
+          style = localStorage.getItem('style');
+          localStorage.setItem('style', style);
+        } else {
+          localStorage.setItem('style', style);
+        }
+      }
+      catch (e) {
+        // no localStorage
+      }
+
+      if (styles[style]) {
+        alert(style);
+        var link = document.createElement('link');
+        link.setAttribute('rel', 'stylesheet');
+        link.setAttribute('href', styles[style]);
+        document.head.appendChild(link);
+      }
+    })();
+  </script>
+</head>
+
+<body>
+  
+<a href="index.html" class="ascii-logo">
+******************************
+  ****************************
+   *****                   ***
+      ****                 ***
+       *****               ***          ***       ***  ***   ********     **       **    ********  ***********   *******    ***********    ***        **
+          ****             ***           ***     ***   ***   ***    ***   **       **   **              **     ***     ***      **        *****       **
+           *****           ***            **     **    ***   ***     **   **       **  ***              **    ***        **     **       *** ***      **
+              ****         ***            ***   **     ***   *********    **       **    ******         **    ***        **     **       **   ***     **
+            *****          ***             *** ***     ***   ***  ***     **       **        ****       **    ***        **     **      *********     **
+          ****             ***              *****      ***   ***   ***    ***     ***         ***       **     ***      **      **     ***     ***    **
+        *****              ***               ***       ***   ***    ***    *********   *********        **      *********       **    ***       ***   *********
+      ****                 ***
+    ****                   ***
+  ****************************
+******************************
+</a>
+<div class="outdated-browser">
+  This is a minimal interface for browsers that do not support <a href="https://www.virustotal.com/gui/">full-fledged VirusTotal</a>
+</div>
+<div class="wrapper">
+  <div id="tabsWrapper" class="tabs">
+    <button class="active" data-target="fileTab" onclick="home.selectTab(event);">File</button>
+    <button data-target="urlTab" onclick="home.selectTab(event);">URL</button>
+    <button data-target="searchTab" onclick="home.selectTab(event);">Search</button>
+  </div>
+
+  <div class="tabs-content">
+    <div id="fileTab">
+      <input id="fileSelector" type="file" onchange="home.fileChanged(event);">
+      <div id="selectedFileName"></div>
+      <button id="uploadButton" class="btn btn-primary" type="button" onclick="home.selecFile();">
+        Choose file
+      </button>
+    </div>
+
+    <div id="urlTab" style="display: none;">
+      <div style="margin-bottom: 14px;">
+        <input id="urlInput" type="text" onkeyup="home.checkInputEnterPressed(event, home.scanUrl);">
+      </div>
+      <button id="scanButton" class="btn btn-primary" type="button" onclick="home.scanUrl(event);">
+        Scan url
+      </button>
+    </div>
+
+    <div id="searchTab" style="display: none">
+      <div style="margin-bottom: 14px;">
+        <input id="searchInput" type="text" onkeyup="home.checkInputEnterPressed(event, home.search);">
+      </div>
+      <button id="searchButton" class="btn btn-primary" type="button" onclick="home.search(event);">
+        Search
+      </button>
+    </div>
+  </div>
+
+  <p>
+    By submitting your file to VirusTotal you are asking VirusTotal to share your submission with the security community and agree to our <a href="https://support.virustotal.com/hc/en-us/articles/115002145529-Terms-of-Service" target="_blank">Terms of Service</a> and <a href="https://support.virustotal.com/hc/en-us/articles/115002168385-Privacy-Policy" target="_blank">Privacy Policy</a>. <a href="https://support.virustotal.com/hc/en-us/articles/115002126889-How-it-works" target="_blank">Learn more</a>.
+  </p>
+</div>
+<script type="text/javascript" src="static/js/home.js"></script>
+
+</body>
+
+<!-- Mirrored from www.virustotal.com/old-browsers/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Feb 2020 03:24:30 GMT -->
+</html>
