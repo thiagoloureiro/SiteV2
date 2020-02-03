@@ -62,9 +62,11 @@
     };
     (function() {
       var style = getUrlParam('style');
+
       try {
         if (!style) {
-          style = localStorage.getItem('style');
+          //style = localStorage.getItem('style');
+          style = 'scifi';
         } else {
           localStorage.setItem('style', style);
         }
