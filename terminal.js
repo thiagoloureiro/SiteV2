@@ -11,7 +11,7 @@ var Terminal = Terminal || function(cmdLineContainer, outputContainer) {
   var output_ = document.querySelector(outputContainer);
 
   const CMDS_ = [
-    'cat', 'clear', 'clock', 'date', 'echo', 'help', 'uname', 'whoami'
+   'clear', 'clock', 'date', 'help', 'cv','download'
   ];
   
   var fs_ = null;
@@ -139,6 +139,14 @@ var Terminal = Terminal || function(cmdLineContainer, outputContainer) {
             result += prop + ": " + codehelper_ip[prop] + "<br>";
           output(result);
           break;
+        case 'download':
+          output('The CV will be opened in a new tab :)')
+          window.open('thiago-resume.pdf', '_blank');
+          break;
+        case 'cv':
+          output('The CV will be opened in a new tab :)')
+          window.open('thiago-resume.pdf', '_blank');
+            break;
         default:
           if (cmd) {
             output(cmd + ': command not found :(');
