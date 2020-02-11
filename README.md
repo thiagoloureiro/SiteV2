@@ -1,3 +1,3 @@
 # SiteV2
 Portfolio Site
-http://wwww.thiagoloureiro.com.br
+http://www.thiagoloureiro.com.br
